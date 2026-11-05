@@ -11,5 +11,6 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
         with: { gradle-version: 8.7 }
       - run: gradle assembleDebug
+        working-directory: autopay-app
       - uses: actions/upload-artifact@v4
-        with: { name: autopay-apk, path: app/build/outputs/apk/debug/app-debug.apk }
+        with: { name: autopay-apk, path: autopay-app/app/build/outputs/apk/debug/app-debug.apk }
